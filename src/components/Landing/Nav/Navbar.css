@@ -1,0 +1,251 @@
+/* Navigation bar */
+.nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Logo */
+.logo-img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fff;
+}
+
+/* Menu bar */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+}
+
+.nav-menu.active {
+  display: flex;
+}
+
+.nav-menu h4 {
+  padding: 1rem 0;
+  color: #424242;
+  cursor: pointer;
+}
+
+/* Login button */
+.login-btn button {
+  transition: all 0.2s;
+  background-color: #4741f9;
+  width: 5rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn button:hover {
+  background-color: #5953ff;
+}
+
+.login-btn button:active {
+  background-color: #302caa;
+}
+
+/* Menu button (3 bar icon) */
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn i {
+  color: #424242;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #424242;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #4242425e;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  min-width: 150px;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #424242;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #e4e4e4;
+}
+
+/* Support link */
+.support a {
+  text-decoration: none;
+  color: #424242;
+}
+
+.support a:hover {
+  color: #4741f9;
+}
+
+/* Responsive styles */
+
+/* Mobile-first responsive styles */
+@media (max-width: 640px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    gap: 0.5rem; /* Additional spacing for better readability */
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    border: none;
+    background-color: #f8f8f8;
+    box-shadow: none;
+  }
+
+  .login-btn {
+    margin-top: 1rem;
+  }
+}
+
+/* Tablet and iPad (iPad Mini, etc.) */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    gap: 0.5rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    border: none;
+    background-color: #f8f8f8;
+    box-shadow: none;
+  }
+
+  .login-btn {
+    margin-top: 1rem;
+  }
+}

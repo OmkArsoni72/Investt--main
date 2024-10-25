@@ -1,0 +1,63 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Adjust based on Mainnav height */
+  overflow: hidden; /* Remove comment to prevent overall scrolling */
+}
+
+.dashboard-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.dashboard-content > div {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.dash-nav {
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio,
+.holdings,
+.watchlist,
+.transactions {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    height: calc(100vh - 60px); /* Adjust based on Mainnav height */
+  }
+}
+
+/* Ensure Mainnav is visible on top */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Add styles for scrollbar */
+.dashboard-content > div::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dashboard-content > div::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dashboard-content > div::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.dashboard-content > div::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

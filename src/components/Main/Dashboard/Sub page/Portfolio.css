@@ -1,0 +1,234 @@
+.upper-sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.upper-sec .first,
+.upper-sec .second,
+.upper-sec .third,
+.upper-sec .fourth {
+    flex: 1 1 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.upper-sec .first:hover,
+.upper-sec .second:hover,
+.upper-sec .third:hover,
+.upper-sec .fourth:hover {
+    transform: translateY(-5px);
+}
+
+.upper-sec .first {
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-sec .first h2 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #333;
+}
+
+.second h5, .third h5, .fourth h5 {
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.lower-sec {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.lower-sec h3 {
+    margin-left: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.lower-sec p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: #666;
+}
+
+.left {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    width: calc(100% - 2rem);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.index-card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 2px solid #4741F9;
+    transition: all 0.3s ease;
+}
+
+.index-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.index-card .index-left,
+.index-card .index-right {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem 0;
+}
+
+.index-card .index-right h6 {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.index-card .index-right h6[data-change^="-"] {
+    color: #dc3545;
+}
+
+.right {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    min-height: 200px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.right h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.portfolio-graph {
+    margin-bottom: 1rem;
+}
+
+.graph-legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.legend-item span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.view-all-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    border: none;
+    background-color: #4741F9;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #3732c7;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 768px) {
+    .upper-sec {
+        padding: 1.5rem 3rem;
+    }
+
+    .upper-sec .first,
+    .upper-sec .second,
+    .upper-sec .third,
+    .upper-sec .fourth {
+        flex: 1 1 calc(50% - 1rem);
+        margin-right: 1rem;
+    }
+
+    .upper-sec .second,
+    .upper-sec .fourth {
+        margin-right: 0;
+    }
+
+    .lower-sec {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .left, .right {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .upper-sec {
+        flex-wrap: nowrap;
+        padding: 2rem 5rem;
+    }
+
+    .upper-sec .first,
+    .upper-sec .second,
+    .upper-sec .third,
+    .upper-sec .fourth {
+        flex: 1;
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .upper-sec .fourth {
+        margin-right: 0;
+    }
+
+    .lower-sec {
+        flex-wrap: nowrap;
+    }
+
+    .left {
+        width: 25%;
+        margin-left: 4rem;
+        margin-right: 2rem;
+        padding: 2rem;
+    }
+
+    .right {
+        width: 75%;
+        margin-right: 4rem;
+    }
+}

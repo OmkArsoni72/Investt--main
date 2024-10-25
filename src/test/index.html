@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <nav class="nav">
+        <div class="main-nav">
+            <div class="nav-left">
+                <div class="nav-logo">
+                    <a href="/">
+                        <div class="logo">
+                            <img
+                                class="logo-img"
+                                src="https://www.investtplus.com/Img-Vid/investtplus%20logo.jpg"
+                                alt="Investt+ logo"
+                            />
+                            <h1>Investt+</h1>
+                        </div>
+                    </a>
+                </div>
+                <button class="menu-btn" aria-label="Toggle menu">
+                    <i class="ri-menu-3-line"></i>
+                </button>
+            </div>
+            <div class="nav-menu">
+                <button class="close-menu-btn" aria-label="Close menu">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div class="nav-links">
+                    <a href="/explore">Explore</a>
+                    <a href="/dashboard">Dashboard</a>
+                </div>
+                <div class="nav-right">
+                    <div class="wallet-icon">
+                        <i class="ri-wallet-3-line"></i>
+                        <span class="icon-text">Wallet</span>
+                    </div>
+                    <div class="notification-icon">
+                        <i class="ri-notification-2-fill"></i>
+                        <span class="icon-text">Notifications</span>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <i class="ri-search-2-line"></i>
+                    </div>
+                    <div class="profile-icon">
+                        <div class="profile-circle">
+                            U
+                        </div>
+                        <span class="icon-text">Profile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-nav">
+            <div id="Portfolio" class="sub-nav-item">Portfolio</div>
+            <div id="Holdings" class="sub-nav-item">Holdings</div>
+            <div id="Watchlist" class="sub-nav-item">Watchlist</div>
+            <div id="Transactions" class="sub-nav-item">Transactions</div>
+        </div>
+    </nav>
+
+
+    <script>
+        // JavaScript to toggle the menu
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // JavaScript to close the menu
+        document.querySelector('.close-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

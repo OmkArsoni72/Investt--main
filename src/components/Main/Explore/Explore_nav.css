@@ -1,0 +1,45 @@
+.sub-nav {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.sub-nav::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+.sub-nav-item {
+  flex: 0 0 auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  color: #4741f9; /* Changed from default to blue */
+}
+
+.sub-nav-item.active {
+  background-color: #e6e9ff; /* Light blue background for active state */
+  font-weight: bold;
+  color: #2b24f5; /* Darker blue for active state */
+}
+
+.sub-nav-item:hover {
+  background-color: #f0f3ff; /* Light blue background for hover state */
+  color: #3631f7; /* Slightly darker blue for hover state */
+}
+
+@media (max-width: 768px) {
+  .sub-nav {
+    padding-bottom: 5px; /* Add some padding to ensure buttons are fully visible */
+  }
+  
+  .sub-nav-item {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+  }
+}

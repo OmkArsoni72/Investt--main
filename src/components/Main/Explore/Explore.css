@@ -1,0 +1,107 @@
+.explore {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* Adjust based on Mainnav height */
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.explore-content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.explore-content > div {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.explore-content > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sub-nav {
+  background-color: #f8f9fa;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.sub-nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.sub-nav a:hover,
+.sub-nav a.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.stocks,
+.mutual-funds,
+.fixed-deposit,
+.insurance {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .explore {
+    height: calc(100vh - 60px); /* Adjust based on Mainnav height */
+  }
+
+  .explore-content {
+    flex-direction: column;
+  }
+
+  .explore-content > div {
+    margin: 0.5rem 0;
+  }
+
+  .sub-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+  }
+
+  .sub-nav a {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+}
+
+/* Ensure Mainnav is visible on top */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

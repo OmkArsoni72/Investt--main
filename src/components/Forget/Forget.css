@@ -1,0 +1,184 @@
+.forget-page {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+}
+
+.forget-left {
+  height: 100vh;
+  width: 30%;
+  background-color: #4741f9;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.forget-left-up {
+  height: 50%;
+  width: 100%;
+}
+
+.forget-left-down {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.forget-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2rem;
+  font-size: 0.8rem;
+}
+
+.forget-logo-img {
+  height: 3rem;
+  width: 3rem;
+  background-image: url("https://www.investtplus.com/Img-Vid/investtplus%20logo.jpg");
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.forget-monolog {
+  margin: 3rem 2rem;
+}
+
+.forget-mono {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.line {
+  margin-top: 5px;
+  width: 20%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.forget-img {
+  height: 30vmax;
+  background-image: url(./img/man_doubt.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.forget-cc {
+  margin: 2rem;
+  font-size: 0.8rem;
+}
+
+.forget-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.forget-right-up {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.forget-right-up p {
+  color: #454545;
+  font-weight: 600;
+}
+
+.forget-right-up a {
+  color: #454545;
+  text-decoration: none;
+}
+
+.forget-right-down {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forget-content {
+  width: 60vmin;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.forget-content h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.forget-content p {
+  margin-top: 2vh;
+  font-size: 0.7rem;
+}
+
+.forget-content form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8vh;
+  gap: 2vh;
+}
+
+.forget-content form input {
+  padding: 1.5vh 1vw;
+  border: none;
+  border-bottom: solid #454545e5 2px;
+}
+
+.forget-content form button {
+  padding: 2vh 2vw;
+  background-color: #4741f9;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer {
+  padding: 2rem;
+  font-size: 0.8rem;
+  background-color: #4741f9;
+  color: #fff;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .forget-page {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .forget-left {
+    width: 100%;
+    height: auto;
+  }
+
+  .forget-left-down {
+    display: none;
+  }
+
+  .forget-right {
+    width: 100%;
+  }
+
+  .forget-content {
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  footer {
+    display: block;
+  }
+}

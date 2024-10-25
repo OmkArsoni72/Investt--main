@@ -1,0 +1,230 @@
+/* Watchlist Container */
+.watchlist-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Watchlist Header */
+.watchlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.left-sec {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left-sec h1 {
+    margin-right: 20px;
+    font-size: 28px;
+    color: #4741f9;
+    font-weight: 600;
+}
+
+/* Dropdown */
+.watchlist-dropdown {
+    position: relative;
+}
+
+.watchlist-dropdown-toggle {
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 2px solid #4741f9;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #4741f9;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.watchlist-dropdown-toggle:hover {
+    background-color: #4741f9;
+    color: #fff;
+}
+
+.watchlist-dropdown-toggle i {
+    margin-left: 10px;
+}
+
+.watchlist-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.watchlist-dropdown-menu li button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.watchlist-dropdown-menu li button:hover {
+    background-color: #f0f0f0;
+    color: #4741f9;
+}
+
+/* Search */
+.search {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+}
+
+.search-input {
+    padding: 12px 20px;
+    padding-right: 40px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #4741f9;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4741f9;
+}
+
+/* Table */
+.table-container {
+    max-height: 500px;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.watchlist-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.watchlist-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.watchlist-table th,
+.watchlist-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.watchlist-table th {
+    background-color: #4741f9;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.watchlist-table tr:last-child td {
+    border-bottom: none;
+}
+
+.watchlist-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.positive {
+    color: #4caf50;
+    font-weight: 600;
+}
+
+.negative {
+    color: #f44336;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .watchlist-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search {
+        max-width: 100%;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .watchlist-table {
+        min-width: 600px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .watchlist-container {
+        padding: 10px;
+    }
+
+    .watchlist-table th,
+    .watchlist-table td {
+        padding: 10px;
+    }
+
+    .watchlist-dropdown-toggle {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .watchlist-dropdown-menu {
+        max-width: 100%;
+    }
+
+    .watchlist-dropdown-menu li button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .search-input {
+        font-size: 14px;
+        padding: 10px 15px;
+        padding-right: 35px;
+    }
+
+    .search-icon {
+        right: 12px;
+    }
+
+    .table-container {
+        max-height: 400px;
+    }
+}
