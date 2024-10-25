@@ -1,13 +1,16 @@
 {
+  "homepage": "https://OmkArsoni72.github.io/Investt--main",
   "name": "react-yt",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host", 
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy":"gh-pages -d build",
+    "predeploy":"npm run build"
   },
   "dependencies": {
     "chart.js": "^4.4.5",
@@ -26,6 +29,7 @@
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.12",
+    "gh-pages": "^6.2.0",
     "globals": "^15.9.0",
     "vite": "^5.4.8"
   }
